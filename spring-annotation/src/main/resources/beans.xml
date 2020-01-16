@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:tx="http://www.springframework.org/schema/cache"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd http://www.springframework.org/schema/cache http://www.springframework.org/schema/cache/spring-cache.xsd">
+    <!-- 包扫描：只要标注了@Controller @Service @Repository @Component 都会注册为Bean-->
+    <context:component-scan base-package="com.itguigu"></context:component-scan>
+    <context:property-placeholder location="classpath:person.properties" />
+<bean id="person" class="com.itguigu.bean.Person" depends-on="book,user">
+    <property name="name" value="zhangshan"/>
+    <property name="age" value="18"/>
+
+</bean>
+    <aop:aspectj-autoproxy></aop:aspectj-autoproxy> <!-- 开启基于注解版的切面功能-->
+<tx:annotation-driven /> <!-- 开启事务控制 -->
+
+</beans>
