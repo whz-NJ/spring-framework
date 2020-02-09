@@ -1,0 +1,3 @@
+测试工程：spring-annotation
+测试用例： MainTest.java 以及 test 目录下的测试用例。
+注释参考 SpringSource.txt 以及 config 目录下的各个配置类。
