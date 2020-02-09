@@ -10,6 +10,7 @@ import org.springframework.context.annotation.Scope;
  * @author whz
  * @create 2020-01-09 14:22
  * @desc 生命周期：创建---初始化---销毁，容器管理Bean的生命周期
+ * obj = new Obj(); obj.setXXX(xxx)---对应spring.xml里设置的各属性值; obj.init-method()---spring.xml里配置的init-method;
  * 我们可以自定义初始化和销毁方法，容器在Bean运行到初始化/销毁方法，会调用我们自定义的方法
  * 构造（创建对象）
  *     单实例：在容器启动时创建对象
