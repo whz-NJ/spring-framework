@@ -25,7 +25,8 @@ import org.springframework.context.annotation.Primary;
  *     }
  * 2）Spring还支持使用：
  *    @Resource(JSR250 Java规范里定义)
- *    可以和@Autowire一样，实现自动装配，@Resource默认按组件名称来装配，也可以通过Name属性指定：@Resource(name="bookDao2")
+ *    可以和@Autowire一样，实现自动装配，@Resource默认按变量名称来装配，也可以通过Name属性指定：@Resource(name="bookDao2")
+ *    @Resource 注解如果按照名称找不到对应的类，就再按照类型来装配。
  *    它不能结合@Qualifier/@Primary这些Spring注解使用，也没有required=false功能
  *    @Inject(JSR330 Java规范里定义，使用该注解需要依赖 javax.inject 包)
  *    日志打印：'javax.inject.Inject' annotation found and supported for autowiring
