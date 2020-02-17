@@ -482,6 +482,7 @@ project("spring-context") {
 	dependencies {
 		compile(project(":spring-aop"))
 		compile(project(":spring-beans"))
+		compile(project(":spring-beans-groovy"))
 		compile(project(":spring-core"))
 		compile(project(":spring-expression"))
 		compile(files(project(":spring-core").cglibRepackJar))
@@ -1097,6 +1098,11 @@ project("spring-aspects") {
 	eclipse.project {
 		natures += "org.eclipse.ajdt.ui.ajnature"
 		buildCommands = [new org.gradle.plugins.ide.eclipse.model.BuildCommand("org.eclipse.ajdt.core.ajbuilder")]
+	}
+	compileJava {
+		sourceCompatibility = 1.8
+		targetCompatibility = 1.8
+		options.encoding = 'UTF-8'
 	}
 }
 

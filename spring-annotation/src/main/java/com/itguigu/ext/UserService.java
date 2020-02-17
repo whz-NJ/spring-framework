@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
  * @create 2020-01-14 7:40
  * @desc TODO: add description here
  **/
-@Service
+@Service("userService2")
 public class UserService {
    @EventListener(classes={ApplicationEvent.class})
    public void listen(ApplicationEvent event) {

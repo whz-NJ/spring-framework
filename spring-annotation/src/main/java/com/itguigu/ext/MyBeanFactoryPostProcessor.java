@@ -23,4 +23,7 @@ public class MyBeanFactoryPostProcessor implements BeanFactoryPostProcessor {
     System.out.println("当前BeanFactory 中有" + count +"个Bean.");
     System.out.println(Arrays.asList(names));
   }
+  public void MyBeanFactoryPostProcessor() {
+    System.out.println("MyBeanFactoryPostProcessor");
+  }
 }

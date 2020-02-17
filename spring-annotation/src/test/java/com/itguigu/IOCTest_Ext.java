@@ -29,4 +29,8 @@ public class IOCTest_Ext {
 
     applicationContext.close();
   }
+
+  public static void main(String[] args) {
+    new IOCTest_Ext().test01();
+  }
 }
